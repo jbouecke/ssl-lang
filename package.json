@@ -1,7 +1,8 @@
 {
     "name": "ssl-lang",
-    "displayName": "ssl-lang",
+    "displayName": "SSL-lang",
     "description": "SSL Language (unofficial)",
+    "publisher": "Janosch",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.63.0"

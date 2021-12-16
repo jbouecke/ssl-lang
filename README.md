@@ -1,8 +1,8 @@
-# SSL-lang README
+# SSL-lang Extension
 
-This is the README for your extension "ssl-lang". It’s an unofficial syntax highlighting support for the Starlims Scripting Language.
+This extension "ssl-lang" is an unofficial syntax highlighting support for the Starlims Scripting Language.
 
-## Features
+## Features 
 
 For now, the extension just provides the 'SSL' language and basic syntax highlighting via the text mate grammar.
 
@@ -22,6 +22,6 @@ N/A
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release (basic syntax highlighting and language definition)
