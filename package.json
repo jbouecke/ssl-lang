@@ -1,0 +1,25 @@
+{
+    "name": "ssl-lang",
+    "displayName": "ssl-lang",
+    "description": "SSL Language (unofficial)",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "SSL",
+            "aliases": ["Starlims Scripting Language", "ssl"],
+            "extensions": [".ssl .srvscr"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "SSL",
+            "scopeName": "source.ssl",
+            "path": "./syntaxes/ssl.tmLanguage.json"
+        }]
+    }
+}
