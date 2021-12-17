@@ -25,5 +25,13 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
+    ],
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*(:FOR|:WHILE|:PROCEDURE).*$",
+            "action": {
+                "indent": "indent"
+            }
+        }
     ]
 }
