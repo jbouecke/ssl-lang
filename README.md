@@ -22,6 +22,11 @@ N/A
 
 ## Release Notes
 
+### 0.0.3
+
+- Adding 3 basic codesnippets (for FOR & WHILE loops and PROCEDURE statements)
+- Adding auto-indentation, when pressing enter directly behind a :FOR/:WHILE/:PROCEDURE statement
+
 ### 0.0.2
 
 Adding line comment (even though such doesn't exist in SSL). However, it mimics the known behavior.
