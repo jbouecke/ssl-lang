@@ -11,16 +11,31 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "SSL",
-            "aliases": ["Starlims Scripting Language", "ssl"],
-            "extensions": [".ssl .srvscr"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "SSL",
-            "scopeName": "source.ssl",
-            "path": "./syntaxes/ssl.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "SSL",
+                "aliases": [
+                    "Starlims Scripting Language",
+                    "ssl"
+                ],
+                "extensions": [
+                    ".ssl .srvscr"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "SSL",
+                "scopeName": "source.ssl",
+                "path": "./syntaxes/ssl.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "SSL",
+                "path": "./snippets/snippets.json"
+            }
+        ]
     }
 }
