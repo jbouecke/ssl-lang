@@ -22,6 +22,10 @@ N/A
 
 ## Release Notes
 
+### 0.0.2
+
+Adding line comment (even though such doesn't exist in SSL). However, it mimics the known behavior.
+
 ### 0.0.1
 
 Initial release (basic syntax highlighting and language definition)
