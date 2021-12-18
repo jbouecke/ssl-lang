@@ -5,6 +5,9 @@
 		{
 			"include": "#comment"
 		},
+		{ 
+			"include": "#embeddedSql" 
+		},
 		{
 			"include": "#keywordsControl"
 		},
@@ -40,13 +43,13 @@
 		"keywordsControl": {
 			"patterns": [{
 				"name": "keyword.control",
-				"match": ":(IF|DEFAULT|REGION|ENDREGION|ENDIF|ELSE|LOOP|WHILE|ENDWHILE|CASE|EXITCASE|RETURN)\\b"
+				"match": ":(IF|DEFAULT|REGION|ENDREGION|ENDIF|ELSE|LOOP|WHILE|ENDWHILE|FOR|NEXT|EXITFOR|CASE|EXITCASE|RETURN)\\b"
 			}]
 		},
 		"keywordsStorage": {
 			"patterns": [{
 				"name": "storage.type",
-				"match": ":(PUBLIC|DECLARE|CLASS|PARAMETERS|PROCEDURE|ENDPROC)\\b"
+				"match": ":(PUBLIC|DECLARE|CLASS|INHERIT|PARAMETERS|PROCEDURE|ENDPROC)\\b"
 			}]
 		},
 		"blueFunctions": {
@@ -93,7 +96,13 @@
 			"name": "string.quoted.sinlge",
 			"begin": "'",
 			"end": "'"
-		}
+		},
+		"embeddedSql": {
+            "begin": "([Ss][Qq][Ll][Ee][Xx][Ee][Cc][Uu][Tt][Ee]|[Rr][Uu][Nn][Ss][Qq][Ll]|[Ll][Ss][Ee][Aa][Rr][Cc][Hh]|[Ll][Ss][Ee][Ll][Ee][Cc][Tt])\\s*\\(\\s*(\"|')",
+			"end": "(\"|').*\\);",
+            "name": "meta.embedded.block.sql",
+			"patterns": [ {"include": "source.sql"} ]
+        }
 	},
 	"scopeName": "source.ssl"
 }
