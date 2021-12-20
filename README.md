@@ -22,6 +22,13 @@ N/A
 
 ## Release Notes
 
+### 0.0.4
+
+- Added try/catch and LIMS transaction snippets
+- Added try/catch keywords to language file
+- Adding capability to syntax-highlight embedded sql code (a plugin that provides language support for sql needs to be installed)
+- Adding 4 more keywords for syntax highlighting: INHERIT / FOR / NEXT / EXITFOR
+
 ### 0.0.3
 
 - Adding 3 basic codesnippets (for FOR & WHILE loops and PROCEDURE statements)
