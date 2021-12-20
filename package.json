@@ -3,7 +3,7 @@
     "displayName": "SSL-lang",
     "description": "SSL Language (unofficial)",
     "publisher": "Janosch",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.63.0"
     },

@@ -4,7 +4,7 @@ All notable changes to the "ssl-lang" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [unpublished] - 2021-12-18P2D
+## [0.0.4] - 2021-12-20
 
 - Added try/catch and LIMS transaction snippets
 - Added try/catch keywords to language file
