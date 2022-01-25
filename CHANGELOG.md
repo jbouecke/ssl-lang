@@ -4,6 +4,11 @@ All notable changes to the "ssl-lang" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.6] - 2022-01-25
+
+- improved sql syntax inlay (considering 'iif')
+- added 'CreateUdObject' as 'blue function' ;-)
+
 ## [0.0.5] - 2022-01-25
 
 - improved sql syntax inlay
