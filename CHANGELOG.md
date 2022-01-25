@@ -4,7 +4,7 @@ All notable changes to the "ssl-lang" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## unpublished
+## [0.0.5] - 2022-01-25
 
 - improved sql syntax inlay
 - added 'runsql' as 'blue function' ;-)
