@@ -22,6 +22,13 @@ N/A
 
 ## Release Notes
 
+
+### 0.0.5
+
+- improved sql syntax inlay
+- added 'runsql' as 'blue function' ;-)
+
+
 ### 0.0.4
 
 - Added try/catch and LIMS transaction snippets
