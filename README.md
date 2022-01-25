@@ -23,6 +23,11 @@ N/A
 ## Release Notes
 
 
+### 0.0.6
+
+- improved sql syntax inlay (considering 'iif')
+- added 'CreateUdObject' as 'blue function' ;-)
+
 ### 0.0.5
 
 - improved sql syntax inlay
