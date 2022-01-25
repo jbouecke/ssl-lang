@@ -60,7 +60,7 @@
       "patterns": [
         {
           "name": "support.function",
-          "match": "\\b(usrmes|UsrMes|AAddd|aadd|Empty|empty|execfunction|ExecFunction|doproc|DoProc)(?=\\()"
+          "match": "\\b(usrmes|UsrMes|AAddd|aadd|Empty|empty|execfunction|ExecFunction|doproc|DoProc|RunSql|runsql)(?=\\()"
         }
       ]
     },
@@ -108,9 +108,56 @@
       "end": "'"
     },
     "embeddedSql": {
-      "begin": "([Ss][Qq][Ll][Ee][Xx][Ee][Cc][Uu][Tt][Ee]|[Rr][Uu][Nn][Ss][Qq][Ll]|[Ll][Ss][Ee][Aa][Rr][Cc][Hh]|[Ll][Ss][Ee][Ll][Ee][Cc][Tt])\\s*\\(\\s*(\"|')",
-      "end": "(\"|').*\\);",
+      "begin": "([Ss][Qq][Ll][Ee][Xx][Ee][Cc][Uu][Tt][Ee]|[Rr][Uu][Nn][Ss][Qq][Ll]|[Ll][Ss][Ee][Aa][Rr][Cc][Hh]|[Ll][Ss][Ee][Ll][Ee][Cc][Tt]|[Sa][Qq][Ll][Uu][Tt][Ii][Ll][Ss]:[Gg][Ee][Tt][Uu][dD][oO])\\s*\\(\\s*",
+      "end": "\\)|,",
+      "name": "support.function",
+      "patterns": [
+        {
+          "include": "#comment"
+        },
+        {
+          "include": "#embeddedSqlStringsDouble"
+        },
+        {
+          "include": "#embeddedSqlStringsSingle"
+        },
+        {
+          "include": "#embeddedSql"
+        },
+        {
+          "include": "#blueFunctions"
+        },
+        {
+          "include": "#function"
+        },
+        {
+          "include": "#identifier"
+        },
+        {
+          "include": "#operator"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#langConstants"
+        }
+      ]
+    },
+    "embeddedSqlStringsDouble": {
       "name": "meta.embedded.block.sql",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "include": "source.sql"
+        }
+      ]
+    },
+    "embeddedSqlStringsSingle": {
+      "name": "meta.embedded.block.sql",
+      "begin": "'",
+      "end": "'",
       "patterns": [
         {
           "include": "source.sql"
