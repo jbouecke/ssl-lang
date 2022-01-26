@@ -4,6 +4,12 @@ All notable changes to the "ssl-lang" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## unpublished
+
+- add furhter blue functions 
+- array detection for syntax highlighting
+- add "!=" operator
+
 ## [0.0.6] - 2022-01-25
 
 - improved sql syntax inlay (considering 'iif')
