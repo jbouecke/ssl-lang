@@ -47,6 +47,9 @@
           "include": "#function"
         },
         {
+          "include": "#identifier_accessed"
+        },
+        {
           "include": "#identifier"
         },
         {
@@ -65,6 +68,9 @@
           "include": "#numbers"
         },
         {
+          "include": "#array"
+        },
+        {
           "include": "#langConstants"
         }
       ]
@@ -78,13 +84,36 @@
       "patterns": [
         {
           "name": "variables.other",
-          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*:?(?!\\()"
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*(?!\\()"
+        }
+      ]
+    },
+    "identifier_accessed": {
+      "patterns": [
+        {
+          "name": "variables.other",
+          "begin": "\\b[a-zA-Z_][a-zA-Z0-9_]*(\\[)",
+          "end": "\\]",
+          "patterns": [
+            {
+              "include": "#expression"
+            },
+            {
+              "begin": ",",
+              "end": "(?=,)|(?=\\])",
+              "patterns": [
+                {
+                  "include": "#expression"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "blueFunctions": {
       "name": "support.function",
-      "begin": "\\b(usrmes|UsrMes|AAddd|aadd|Empty|empty|execfunction|ExecFunction|doproc|DoProc|RunSql|runsql|CreateUDObject|createudobject)(\\()",
+      "begin": "\\b(usrmes|UsrMes|AAddd|aadd|Empty|empty|execfunction|ExecFunction|doproc|DoProc|RunSql|runsql|CreateUdObject|CreateUDObject|createudobject|tojson|toJson|Val|val|Len|len)(\\()",
       "end": "\\)",
       "patterns": [
         {
@@ -168,7 +197,16 @@
     },
     "operator": {
       "name": "keyword.operator",
-      "match": "(\\.(and|AND|or|OR)\\.|=|:=|>=?|<=?|==|\\+(?![0-9])|\\-(?![0-9]))"
+      "match": "(\\.(and|AND|or|OR)\\.|=|:=|>=?|<=?|==|!=|\\+(?![0-9])|\\-(?![0-9]))"
+    },
+    "array": {
+      "begin": "\\{",
+      "end": "\\}",
+      "patterns": [
+        {
+          "include": "#expression"
+        }
+      ]
     },
     "stringsDouble": {
       "name": "string.quoted.double",
@@ -223,6 +261,9 @@
           "include": "#function"
         },
         {
+          "include": "#identifier_accessed"
+        },
+        {
           "include": "#identifier"
         },
         {
@@ -230,6 +271,9 @@
         },
         {
           "include": "#numbers"
+        },
+        {
+          "include": "#array"
         },
         {
           "include": "#langConstants"
