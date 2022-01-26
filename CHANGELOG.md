@@ -9,6 +9,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - add furhter blue functions 
 - array detection for syntax highlighting
 - add "!=" operator
+- fixed file extensions to be set to '.ssl' and '.srvscr'
 
 ## [0.0.6] - 2022-01-25
 
