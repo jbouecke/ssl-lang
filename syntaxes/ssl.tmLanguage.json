@@ -17,7 +17,7 @@
       "patterns": [
         {
           "name": "keyword.control",
-          "match": ":(IF|DEFAULT|REGION|ENDREGION|ENDIF|ELSE|LOOP|WHILE|ENDWHILE|FOR|NEXT|EXITFOR|CASE|EXITCASE|RETURN|TRY|CATCH|FINALLY|ENDTRY|TO)\\b"
+          "match": ":(BEGINCASE|CASE|ENDCASE|EXITCASE|OTHERWISE|IF|DEFAULT|REGION|ENDREGION|ENDIF|ELSE|LOOP|WHILE|ENDWHILE|FOR|NEXT|STEP|EXITFOR|RESUME|CASE|EXITCASE|RETURN|TRY|CATCH|FINALLY|ENDTRY|TO)\\b"
         }
       ]
     },
@@ -25,7 +25,7 @@
       "patterns": [
         {
           "name": "storage.type",
-          "match": ":(PUBLIC|DECLARE|CLASS|INHERIT|PARAMETERS|PROCEDURE|ENDPROC)\\b"
+          "match": ":(PUBLIC|DECLARE|CLASS|INHERIT|INCLUDE|PARAMETERS|PROCEDURE|ENDPROC|REGION|ENDREGION|BEGININLINECODE|ENDINLINECODE|ERROR)\\b"
         }
       ]
     },
@@ -113,7 +113,7 @@
     },
     "blueFunctions": {
       "name": "support.function",
-      "begin": "\\b(usrmes|UsrMes|AAddd|aadd|Empty|empty|execfunction|ExecFunction|doproc|DoProc|RunSql|runsql|CreateUdObject|CreateUDObject|createudobject|tojson|toJson|Val|val|Len|len)(\\()",
+      "begin": "(?i)\\b(DoProc|ExecFunction|ExecUdf|CreateUDObject|Branch|aadd|aeval|aevala|afill|alen|arraycalc|arraynew|ascan|ascanexact|buildarray|buildarray2|buildstring|buildstring2|BuildStringForIn|comparray|delarray|extractcol|PrepareArrayForIn|SortArray|ArrayToTVP|deleteinlinecode|endlimsoleconnect|getinlinecode|getregion|In64BitMode|Let|LimsCleanup|LimsNETConnect|LimsNETTypeOf|limsoleconnect|MakeNETObject|StationName|BeginLimsTransaction|DetectSqlInjections|EndLimsTransaction|GetConnectionByName|GetConnectionStrings|GetDataSet|GetDataSetEx|GetDataSetFromArray|GetDataSetFromArrayEx|GetDataSetWithSchemaFromSelect|GetDataSetXMLFromArray|GetDataSetXMLFromSelect|GetDBMSName|GetDBMSProviderName|GetDefaultConnection|GetLastSQLError|GetNETDataSet|GetNoLock|GetTables|GetTransactionsCount|IgnoreSqlErrors|IsDBConnected|IsInTransaction|IsTable|IsTableFld|LimsRecordsAffected|LimsSetCounter|LimsSqlConnect|LimsSqlDisconnect|LSearch|LSelect|LSelect1|LSelectC|RetrieveLong|ReturnLastSQLError|RunSQL|SetDefaultConnection|SetSqlTimeout|ShowSqlErrors|SQLExecute|SQLRemoveComments|TableFldLst|UpdLong|GetDSParameters|GetSSLDataset|RunDS|IsDefined|IsHex|LFromHex|LHex2Dec|LimsNETCast|LimsType|LimsTypeEx|LToHex|ClientEndOfDay|ClientStartOfDay|CMonth|CToD|DateAdd|DateDiff|DateDiffEx|DateFormat|DateFromNumbers|DateFromString|DateToString|Day|DOW|DOY|DToC|DToS|Hour|IsInvariantDate|JDay|LIMSDate|LimsGetDateFormat|LimsTime|MakeDateInvariant|MakeDateLocal|Minute|Month|NoOfDays|Now|Second|Seconds|ServerEndOfDay|ServerStartOfDay|ServerTimeZone|SetAmPm|StringToDate|Time|Today|UserTimeZone|ValidateDate|Year|SendFromOutbox|SendLimsEmail|SendOutlookReminder|SendToOutbox|ClearLastSSLError|FormatErrorMessage|FormatSqlErrorMessage|GetLastSSLError|RaiseError|CombineFiles|Directory|DosSupport|FileSupport|lDir|ReadBytesBase64|ReadText|WriteBytesBase64|WriteText|CheckOnFtp|CopyToFtp|DeleteDirOnFtp|DeleteFromFtp|GetDirFromFtp|GetFromFtp|MakeDirOnFtp|MoveInFtp|ReadFromFtp|RenameOnFtp|SendToFtp|WriteToFtp|MergeHtmlForm|Break|Compress|CreateGUID|CreateLocal|CreatePublic|CreateZip|Decompress|ErrorMes|ExtractZip|GetAppBaseFolder|GetAppWorkPathFolder|GetByName|GetExecutionTrace|GetFeaturesAndNumbers|GetFileVersion|GetForbiddenAppIDs|GetForbiddenDesignerAppIDs|GetInstallationKey|GetLicenseInfoAsText|GetLogsFolder|GetNumberOfInstrumentConnections|GetNumberOfNamedConcurrentUsers|GetNumberOfNamedUsers|GetPrinters|GetSetting|GetSettings|GetSystemLayerId|GetWebFolder|IIf|InBatchProcess|InfoMes|IsDemoLicense|IsFeatureAuthorized|IsFeatureBasedLicense|IsGuid|IsProductionModeOn|LCase|LKill|NetFrameworkVersion|Nothing|ResetApplication|ResetFeatures|SetByName|SqlTraceOff|SqlTraceOn|TryConnect|usrmes|bs|GetDecimalSep|GetDecimalSeparator|GetGroupSeparator|Integer|IsNumeric|LimsXOr|MatFunc|Max|Min|Rand|Round|RoundPoint5|Scient|SetDecimalSeparator|SetGroupSeparator|SigFig|Sqrt|StdRound|ToNumeric|ToScientific|Val|ValidateNumeric|LimsExec|lWait|PrmCount|RunApp|SubmitToBatch|SubmitToBatchEx|TraceOff|TraceOn|UndeclaredVars|LPrint|SetLocationOracle|SetLocationSQLServer|ConvertReport|ChkNewPassword|ChkPassword|DecryptData|EncryptData|GetUserData|HashData|LDAPAuth|LDAPAuthEX|SearchLDAPUser|SetUserData|SetUserPassword|VerifySignature|ValidateFieldData|ValidateData|ValidateDSParams|AllTrim|Asc|At|Chr|Empty|Left|Len|LimsAt|LimsString|LLower|Lower|LStr|LTransform|LTrim|MimeDecode|MimeEncode|Rat|Replace|Replicate|Right|Seval|Str|StringAdd|StringClean|StringCreate|StringGet|StringKill|StrSrch|StrTran|StrZero|SubStr|Trim|Upper|GetAllClientScripts|MergeGlobalResources|PrepareForm|PrepareFormClientScript|ProcessXfdFormForImport|SyncDesignResources|SyncProgramaticResourcesAddProperty|ExecInternal|GetInternal|GetInternalC|HasProperty|SetInternal|SetInternalC|AddToApplication|AddToSession|ClearSession|FromJson|GetFromApplication|GetFromSession|ToJson|UrlDecode|UrlEncodeGetClientScriptReferences|GetFormReferences|MergeXfd|FromXml|HtmlDecode|HtmlEncode|ToXml|XmlDomToUdObject)(\\()",
       "end": "\\)",
       "patterns": [
         {
