@@ -23,6 +23,16 @@ N/A
 ## Release Notes
 
 
+## 0.0.8
+- added further blue functions and control keywords
+
+## 0.0.7
+
+- add furhter blue functions 
+- array detection for syntax highlighting
+- add "!=" operator
+- fixed file extensions to be set to '.ssl' and '.srvscr'
+
 ### 0.0.6
 
 - improved sql syntax inlay (considering 'iif')

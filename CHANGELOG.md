@@ -4,6 +4,9 @@ All notable changes to the "ssl-lang" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.8] - 2022-02-20
+- added further blue functions and control keywords
+
 ## [0.0.7] - 2022-01-27
 
 - add furhter blue functions 
