@@ -219,7 +219,7 @@
       "end": "'"
     },
     "embeddedSql": {
-      "begin": "([Ss][Qq][Ll][Ee][Xx][Ee][Cc][Uu][Tt][Ee]|[Rr][Uu][Nn][Ss][Qq][Ll]|[Ll][Ss][Ee][Aa][Rr][Cc][Hh]|[Ll][Ss][Ee][Ll][Ee][Cc][Tt]|[Sa][Qq][Ll][Uu][Tt][Ii][Ll][Ss]:[Gg][Ee][Tt][Uu][dD][oO])\\s*\\(\\s*",
+      "begin": "(?i)(GetDataSet|GetDataSetEx|SqlExecute|RunSql|LSearch|LSelect|SqlUtils:GetUDo)\\s*\\(\\s*",
       "end": "\\)|,",
       "name": "support.function",
       "patterns": [
