@@ -22,6 +22,16 @@
                     ".ssl",".srvscr"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "SQL",
+                "aliases": [
+                    "sql"
+                ],
+                "extensions": [
+                    ".slsql"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
@@ -29,6 +39,11 @@
                 "language": "SSL",
                 "scopeName": "source.ssl",
                 "path": "./syntaxes/ssl.tmLanguage.json"
+            },
+            {
+                "language": "SQL",
+                "scopeName": "source.sql",
+                "path": "./syntaxes/sql.tmLanguage.json"
             }
         ],
         "snippets": [
