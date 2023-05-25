@@ -16,7 +16,7 @@
     "keywordsControl": {
       "patterns": [
         {
-          "name": "keyword.control",
+          "name": "starlims.ssl.keyword.control",
           "match": ":(BEGINCASE|CASE|ENDCASE|EXITCASE|OTHERWISE|IF|DEFAULT|REGION|ENDREGION|ENDIF|ELSE|LOOP|WHILE|ENDWHILE|FOR|NEXT|STEP|EXITFOR|RESUME|CASE|EXITCASE|RETURN|TRY|CATCH|FINALLY|ENDTRY|TO)\\b"
         }
       ]
@@ -24,7 +24,7 @@
     "keywordsStorage": {
       "patterns": [
         {
-          "name": "keyword.control",
+          "name": "starlims.ssl.keyword.storage",
           "match": ":(PUBLIC|DECLARE|CLASS|INHERIT|INCLUDE|PARAMETERS|PROCEDURE|ENDPROC|REGION|ENDREGION|BEGININLINECODE|ENDINLINECODE|ERROR)\\b"
         }
       ]
@@ -39,6 +39,9 @@
         },
         {
           "include": "#embeddedSqlString"
+        },
+        {
+          "include": "#iif"
         },
         {
           "include": "#blueFunctions"
@@ -92,7 +95,7 @@
     "identifier": {
       "patterns": [
         {
-          "name": "variables.other",
+          "name": "variable",
           "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*(?!\\()"
         }
       ]
@@ -100,7 +103,7 @@
     "identifier_accessed": {
       "patterns": [
         {
-          "name": "variables.other",
+          "name": "variable",
           "begin": "\\b[a-zA-Z_][a-zA-Z0-9_]*(\\[)",
           "end": "\\]",
           "patterns": [
@@ -121,8 +124,8 @@
       ]
     },
     "blueFunctions": {
-      "name": "support.function",
-      "begin": "(?i)(Iif|DoProc|ExecFunction|ExecUdf|CreateUDObject|Branch|aadd|aeval|aevala|afill|alen|arraycalc|arraynew|ascan|ascanexact|buildarray|buildarray2|buildstring|buildstring2|BuildStringForIn|comparray|delarray|extractcol|PrepareArrayForIn|SortArray|ArrayToTVP|deleteinlinecode|endlimsoleconnect|getinlinecode|getregion|In64BitMode|Let|LimsCleanup|LimsNETConnect|LimsNETTypeOf|limsoleconnect|MakeNETObject|StationName|BeginLimsTransaction|DetectSqlInjections|EndLimsTransaction|GetConnectionByName|GetConnectionStrings|GetDataSet|GetDataSetEx|GetDataSetFromArray|GetDataSetFromArrayEx|GetDataSetWithSchemaFromSelect|GetDataSetXMLFromArray|GetDataSetXMLFromSelect|GetDBMSName|GetDBMSProviderName|GetDefaultConnection|GetLastSQLError|GetNETDataSet|GetNoLock|GetTables|GetTransactionsCount|IgnoreSqlErrors|IsDBConnected|IsInTransaction|IsTable|IsTableFld|LimsRecordsAffected|LimsSetCounter|LimsSqlConnect|LimsSqlDisconnect|LSearch|LSelect|LSelect1|LSelectC|RetrieveLong|ReturnLastSQLError|RunSQL|SetDefaultConnection|SetSqlTimeout|ShowSqlErrors|SQLExecute|SQLRemoveComments|TableFldLst|UpdLong|GetDSParameters|GetSSLDataset|RunDS|IsDefined|IsHex|LFromHex|LHex2Dec|LimsNETCast|LimsType|LimsTypeEx|LToHex|ClientEndOfDay|ClientStartOfDay|CMonth|CToD|DateAdd|DateDiff|DateDiffEx|DateFormat|DateFromNumbers|DateFromString|DateToString|Day|DOW|DOY|DToC|DToS|Hour|IsInvariantDate|JDay|LIMSDate|LimsGetDateFormat|LimsTime|MakeDateInvariant|MakeDateLocal|Minute|Month|NoOfDays|Now|Second|Seconds|ServerEndOfDay|ServerStartOfDay|ServerTimeZone|SetAmPm|StringToDate|Time|Today|UserTimeZone|ValidateDate|Year|SendFromOutbox|SendLimsEmail|SendOutlookReminder|SendToOutbox|ClearLastSSLError|FormatErrorMessage|FormatSqlErrorMessage|GetLastSSLError|RaiseError|CombineFiles|Directory|DosSupport|FileSupport|lDir|ReadBytesBase64|ReadText|WriteBytesBase64|WriteText|CheckOnFtp|CopyToFtp|DeleteDirOnFtp|DeleteFromFtp|GetDirFromFtp|GetFromFtp|MakeDirOnFtp|MoveInFtp|ReadFromFtp|RenameOnFtp|SendToFtp|WriteToFtp|MergeHtmlForm|Break|Compress|CreateGUID|CreateLocal|CreatePublic|CreateZip|Decompress|ErrorMes|ExtractZip|GetAppBaseFolder|GetAppWorkPathFolder|GetByName|GetExecutionTrace|GetFeaturesAndNumbers|GetFileVersion|GetForbiddenAppIDs|GetForbiddenDesignerAppIDs|GetInstallationKey|GetLicenseInfoAsText|GetLogsFolder|GetNumberOfInstrumentConnections|GetNumberOfNamedConcurrentUsers|GetNumberOfNamedUsers|GetPrinters|GetSetting|GetSettings|GetSystemLayerId|GetWebFolder|IIf|InBatchProcess|InfoMes|IsDemoLicense|IsFeatureAuthorized|IsFeatureBasedLicense|IsGuid|IsProductionModeOn|LCase|LKill|NetFrameworkVersion|Nothing|ResetApplication|ResetFeatures|SetByName|SqlTraceOff|SqlTraceOn|TryConnect|usrmes|bs|GetDecimalSep|GetDecimalSeparator|GetGroupSeparator|Integer|IsNumeric|LimsXOr|MatFunc|Max|Min|Rand|Round|RoundPoint5|Scient|SetDecimalSeparator|SetGroupSeparator|SigFig|Sqrt|StdRound|ToNumeric|ToScientific|Val|ValidateNumeric|LimsExec|lWait|PrmCount|RunApp|SubmitToBatch|SubmitToBatchEx|TraceOff|TraceOn|UndeclaredVars|LPrint|SetLocationOracle|SetLocationSQLServer|ConvertReport|ChkNewPassword|ChkPassword|DecryptData|EncryptData|GetUserData|HashData|LDAPAuth|LDAPAuthEX|SearchLDAPUser|SetUserData|SetUserPassword|VerifySignature|ValidateFieldData|ValidateData|ValidateDSParams|AllTrim|Asc|At|Chr|Empty|Left|Len|LimsAt|LimsString|LLower|Lower|LStr|LTransform|LTrim|MimeDecode|MimeEncode|Rat|Replace|Replicate|Right|Seval|Str|StringAdd|StringClean|StringCreate|StringGet|StringKill|StrSrch|StrTran|StrZero|SubStr|Trim|Upper|GetAllClientScripts|MergeGlobalResources|PrepareForm|PrepareFormClientScript|ProcessXfdFormForImport|SyncDesignResources|SyncProgramaticResourcesAddProperty|ExecInternal|GetInternal|GetInternalC|HasProperty|SetInternal|SetInternalC|AddToApplication|AddToSession|ClearSession|FromJson|GetFromApplication|GetFromSession|ToJson|UrlDecode|UrlEncodeGetClientScriptReferences|GetFormReferences|MergeXfd|FromXml|HtmlDecode|HtmlEncode|ToXml|XmlDomToUdObject)\\(",
+      "name": "starlims.blue-function",
+      "begin": "(?i)(Iif|DoProc|ExecFunction|ExecUdf|CreateUDObject|Branch|aadd|aeval|aevala|afill|alen|arraycalc|arraynew|ascan|ascanexact|buildarray|buildarray2|buildstring|buildstring2|BuildStringForIn|comparray|delarray|extractcol|PrepareArrayForIn|SortArray|ArrayToTVP|deleteinlinecode|endlimsoleconnect|getinlinecode|getregion|In64BitMode|Let|LimsCleanup|LimsNETConnect|LimsNETTypeOf|limsoleconnect|MakeNETObject|StationName|BeginLimsTransaction|DetectSqlInjections|EndLimsTransaction|GetConnectionByName|GetConnectionStrings|GetDataSet|GetDataSetEx|GetDataSetFromArray|GetDataSetFromArrayEx|GetDataSetWithSchemaFromSelect|GetDataSetXMLFromArray|GetDataSetXMLFromSelect|GetDBMSName|GetDBMSProviderName|GetDefaultConnection|GetLastSQLError|GetNETDataSet|GetNoLock|GetTables|GetTransactionsCount|IgnoreSqlErrors|IsDBConnected|IsInTransaction|IsTable|IsTableFld|LimsRecordsAffected|LimsSetCounter|LimsSqlConnect|LimsSqlDisconnect|LSearch|LSelect|LSelect1|LSelectC|RetrieveLong|ReturnLastSQLError|RunSQL|SetDefaultConnection|SetSqlTimeout|ShowSqlErrors|SQLExecute|SQLRemoveComments|TableFldLst|UpdLong|GetDSParameters|GetSSLDataset|RunDS|IsDefined|IsHex|LFromHex|LHex2Dec|LimsNETCast|LimsType|LimsTypeEx|LToHex|ClientEndOfDay|ClientStartOfDay|CMonth|CToD|DateAdd|DateDiff|DateDiffEx|DateFormat|DateFromNumbers|DateFromString|DateToString|Day|DOW|DOY|DToC|DToS|Hour|IsInvariantDate|JDay|LIMSDate|LimsGetDateFormat|LimsTime|MakeDateInvariant|MakeDateLocal|Minute|Month|NoOfDays|Now|Second|Seconds|ServerEndOfDay|ServerStartOfDay|ServerTimeZone|SetAmPm|StringToDate|Time|Today|UserTimeZone|ValidateDate|Year|SendFromOutbox|SendLimsEmail|SendOutlookReminder|SendToOutbox|ClearLastSSLError|FormatErrorMessage|FormatSqlErrorMessage|GetLastSSLError|RaiseError|CombineFiles|Directory|DosSupport|FileSupport|lDir|ReadBytesBase64|ReadText|WriteBytesBase64|WriteText|CheckOnFtp|CopyToFtp|DeleteDirOnFtp|DeleteFromFtp|GetDirFromFtp|GetFromFtp|MakeDirOnFtp|MoveInFtp|ReadFromFtp|RenameOnFtp|SendToFtp|WriteToFtp|MergeHtmlForm|Break|Compress|CreateGUID|CreateLocal|CreatePublic|CreateZip|Decompress|ErrorMes|ExtractZip|GetAppBaseFolder|GetAppWorkPathFolder|GetByName|GetExecutionTrace|GetFeaturesAndNumbers|GetFileVersion|GetForbiddenAppIDs|GetForbiddenDesignerAppIDs|GetInstallationKey|GetLicenseInfoAsText|GetLogsFolder|GetNumberOfInstrumentConnections|GetNumberOfNamedConcurrentUsers|GetNumberOfNamedUsers|GetPrinters|GetSetting|GetSettings|GetSystemLayerId|GetWebFolder|IIf|InBatchProcess|InfoMes|IsDemoLicense|IsFeatureAuthorized|IsFeatureBasedLicense|IsGuid|IsProductionModeOn|LCase|LKill|NetFrameworkVersion|Nothing|ResetApplication|ResetFeatures|SetByName|SqlTraceOff|SqlTraceOn|TryConnect|usrmes|bs|GetDecimalSep|GetDecimalSeparator|GetGroupSeparator|Integer|IsNumeric|LimsXOr|MatFunc|Max|Min|Rand|Round|RoundPoint5|Scient|SetDecimalSeparator|SetGroupSeparator|SigFig|Sqrt|StdRound|ToNumeric|ToScientific|Val|ValidateNumeric|LimsExec|lWait|PrmCount|RunApp|SubmitToBatch|SubmitToBatchEx|TraceOff|TraceOn|UndeclaredVars|LPrint|SetLocationOracle|SetLocationSQLServer|ConvertReport|ChkNewPassword|ChkPassword|DecryptData|EncryptData|GetUserData|HashData|LDAPAuth|LDAPAuthEX|SearchLDAPUser|SetUserData|SetUserPassword|VerifySignature|ValidateFieldData|ValidateData|ValidateDSParams|AllTrim|Asc|At|Chr|Empty|Left|Len|LimsAt|LimsString|LLower|Lower|LStr|LTransform|LTrim|MimeDecode|MimeEncode|Rat|Replace|Replicate|Right|Seval|Str|StringAdd|StringClean|StringCreate|StringGet|StringKill|StrSrch|StrTran|StrZero|SubStr|Trim|Upper|GetAllClientScripts|MergeGlobalResources|PrepareForm|PrepareFormClientScript|ProcessXfdFormForImport|SyncDesignResources|SyncProgramaticResourcesAddProperty|ExecInternal|GetInternal|GetInternalC|HasProperty|SetInternal|SetInternalC|AddToApplication|AddToSession|ClearSession|FromJson|GetFromApplication|GetFromSession|ToJson|UrlDecode|UrlEncodeGetClientScriptReferences|GetFormReferences|MergeXfd|FromXml|HtmlDecode|HtmlEncode|ToXml|XmlDomToUdObject)\\w?\\(",
       "end": "(?<!\\.)",
       "patterns": [
         {
@@ -140,13 +143,51 @@
       ]
     },
     "navigatorVars": {
-      "name": "variable.other.constant",
+      "name": "starlims.navigator-variables",
       "match": "(?i)(MYUSERNAME|STARLIMSDEPT|MYUSERROLE)"
+    },
+    "iif": {
+      "name": "support.function",
+      "begin": "\\b(iif)(\\()",
+      "end": "\\)",
+      "patterns": [
+        {
+          "include": "#expression"
+        },
+        {
+          "begin": ",",
+          "end": "(?=,)|(?=\\))",
+          "patterns": [
+            {
+              "include": "#expression"
+            }
+          ]
+        }
+      ]
+    },
+    "iif_in_sql": {
+      "name": "starlims.blue-function",
+      "begin": "\\b(iif)(\\()",
+      "end": "\\)",
+      "patterns": [
+        {
+          "include": "#expression"
+        },
+        {
+          "begin": ",",
+          "end": "(?=,)|(?=\\))",
+          "patterns": [
+            {
+              "include": "#expression_in_sql"
+            }
+          ]
+        }
+      ]
     },
     "function": {
       "begin": "\\b[a-zA-Z_][a-zA-Z0-9_]*(\\()",
       "end": "\\)",
-      "name": "support.function",
+      "name": "entity.name.function",
       "patterns": [
         {
           "include": "#expression"
@@ -163,8 +204,8 @@
       ]
     },
     "langConstants": {
-      "name": "constant.character.escape",
-      "match": "(?i)\\.(t|T|f|F)\\."
+      "name": "constant.language",
+      "match": "\\.(t|T|f|F)\\."
     },
     "numbers": {
       "name": "constant.numeric",
@@ -184,12 +225,12 @@
       ]
     },
     "stringsDouble": {
-      "name": "meta.preprocessor.string",
+      "name": "string.quoted.double",
       "begin": "\"",
       "end": "\""
     },
     "stringsSingle": {
-      "name": "meta.preprocessor.string",
+      "name": "string.quoted.sinlge",
       "begin": "'",
       "end": "'"
     },
@@ -200,10 +241,10 @@
     "embeddedSqlString": {
       "begin": "(?i)(\")(select|insert|update|delete|create|drop|alter|truncate|grant|revoke|commit|rollback|set|declare|begin|call|execute|prepare|open|fetch|lock|unlock|merge|rename|replace|purge)\\s+",
       "end": "(\")",
-      "name": "source.sql",
+      "name": "source.slsql",
       "beginCaptures": {
         "0": {
-          "name": "keyword"
+          "name": "keyword.other.DML.sql"
         },
         "1": {
           "name": "string.quoted.double.sql"
@@ -219,7 +260,7 @@
           "include": "#variableInSQLString"
         },
         {
-          "include": "source.sql"
+          "include": "source.slsql"
         }
       ]
     }

@@ -1,0 +1,33 @@
+{
+  "comments": {
+    "blockComment": ["/*", "*/"],
+    "lineComment": "/*"
+  },
+  "brackets": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  "surroundingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  "onEnterRules": [
+    {
+      "beforeText": "^\\s*(:FOR|:WHILE|:PROCEDURE|:IF|:BEGINCASE|:CASE|:TRY|:CATCH|:FINALLY|:REGION).*$",
+      "action": {
+        "indent": "indent"
+      }
+    }
+  ]
+}
