@@ -90,7 +90,7 @@
     "comment": {
       "name": "comment.block.srvsrc",
       "begin": "/\\*",
-      "end": "\\*/|;"
+      "end": "\\*/;"
     },
     "identifier": {
       "patterns": [
@@ -230,7 +230,7 @@
       "end": "\""
     },
     "stringsSingle": {
-      "name": "string.quoted.sinlge",
+      "name": "string.quoted.single",
       "begin": "'",
       "end": "'"
     },

@@ -800,7 +800,8 @@
 				"keyword.other.cascade.sql",
 			],
 			"settings": {
-				"foreground": "#78b2e9"
+				"foreground": "#77baf8",
+				"fontStyle": "italic bold"
 			}
 		},
 		{
