@@ -22,6 +22,10 @@ N/A
 
 ## Release Notes
 
+## 0.0.9
+- added support for datasources written in SSL and SQL
+- added basic T-SQL syntax highlighting
+- introduced a custom theme to make blue functions blue again ;)
 
 ## 0.0.8
 - added further blue functions and control keywords
