@@ -753,7 +753,8 @@
 				"constant.other.database-name.sql"
 			],
 			"settings": {
-				"foreground": "#68c597"
+				"foreground": "#68c597",
+				"fontStyle": "bold"
 			}
 		},
 		{

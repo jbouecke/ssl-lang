@@ -42,14 +42,14 @@
         ],
         "grammars": [
             {
-                "language": "SSL",
-                "scopeName": "source.ssl",
-                "path": "./syntaxes/ssl.tmLanguage.json"
-            },
-            {
                 "language": "SLSQL",
                 "scopeName": "source.slsql",
                 "path": "./syntaxes/slsql.tmLanguage.json"
+            },
+            {
+                "language": "SSL",
+                "scopeName": "source.ssl",
+                "path": "./syntaxes/ssl.tmLanguage.json"
             }
         ],
         "snippets": [
