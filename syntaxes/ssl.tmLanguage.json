@@ -90,7 +90,7 @@
     "comment": {
       "name": "comment.block.srvsrc",
       "begin": "/\\*",
-      "end": "\\*/;"
+      "end": "\\;"
     },
     "identifier": {
       "patterns": [
