@@ -20,6 +20,8 @@ N/A
 * SQL highlighting in separately declared string variables doesn't work.
 
 ## Release Notes
+## 0.0.10
+- fixed line endings for comments in SSL
 
 ## 0.0.9
 - added support for datasources written in SSL and SQL
