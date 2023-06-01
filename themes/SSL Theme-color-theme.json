@@ -185,7 +185,7 @@
 		{
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#569CD6"
+				"foreground": "#fff781"
 			}
 		},
 		{
@@ -733,7 +733,8 @@
 				"starlims.blue-function"
 			],
 			"settings": {
-				"foreground": "#4f87ff"
+				"foreground": "#6689fc",
+				"fontStyle": "bold"
 			}
 		},
 		{

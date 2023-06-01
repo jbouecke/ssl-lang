@@ -32,6 +32,7 @@
             {
                 "id": "SLSQL",
                 "aliases": [
+                    "Starlims SQL",
                     "slsql"
                 ],
                 "extensions": [
