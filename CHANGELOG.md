@@ -4,8 +4,12 @@ All notable changes to the "ssl-lang" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## unpublished - 2022-03-08
+## [0.0.9] - 2022-06-06
 - added getDataSet and getDataSetEx to the functions that will 'trigger' Sql syntax highlighting...
+- added support for datasources written in SSL and SQL
+- added basic T-SQL syntax highlighting in datasources
+- introduced a custom theme to make blue functions blue again ;)
+
 ## [0.0.8] - 2022-02-20
 - added further blue functions and control keywords
 

@@ -1,14 +1,19 @@
 {
     "name": "ssl-lang",
     "displayName": "SSL-lang",
-    "description": "SSL Language (unofficial)",
+    "description": "Starlims Scripting Language (SSL) theme and syntax highlighting for Visual Studio Code.",
     "publisher": "Janosch",
-    "version": "0.0.8",
+    "version": "0.0.9",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jbouecke/ssl-lang"
+    },
     "engines": {
         "vscode": "^1.63.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Themes"
     ],
     "contributes": {
         "languages": [
@@ -19,12 +24,29 @@
                     "ssl"
                 ],
                 "extensions": [
-                    ".ssl",".srvscr"
+                    ".ssl",
+                    ".srvscr"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./language-configuration-ssl.json"
+            },
+            {
+                "id": "SLSQL",
+                "aliases": [
+                    "Starlims SQL",
+                    "slsql"
+                ],
+                "extensions": [
+                    ".slsql"
+                ],
+                "configuration": "./language-configuration-slsql.json"
             }
         ],
         "grammars": [
+            {
+                "language": "SLSQL",
+                "scopeName": "source.slsql",
+                "path": "./syntaxes/slsql.tmLanguage.json"
+            },
             {
                 "language": "SSL",
                 "scopeName": "source.ssl",
@@ -36,6 +58,16 @@
                 "language": "SSL",
                 "path": "./snippets/snippets.json"
             }
+        ],
+        "themes": [
+            {
+                "label": "SSL Language Theme (Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/SSL Theme-color-theme.json"
+            }
         ]
+    },
+    "devDependencies": {
+        "esbuild": "^0.17.19"
     }
 }
