@@ -3,7 +3,7 @@
     "displayName": "SSL-lang",
     "description": "Starlims Scripting Language (SSL) theme and syntax highlighting for Visual Studio Code.",
     "publisher": "Janosch",
-    "version": "0.0.10",
+    "version": "0.0.9",
     "repository": {
         "type": "git",
         "url": "https://github.com/jbouecke/ssl-lang"

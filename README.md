@@ -20,10 +20,9 @@ N/A
 * SQL highlighting in separately declared string variables doesn't work.
 
 ## Release Notes
-## 0.0.10
-- fixed line endings for comments in SSL
 
 ## 0.0.9
+- fixed line endings for comments in SSL
 - added support for datasources written in SSL and SQL
 - added basic T-SQL syntax highlighting
 - introduced a custom theme to make blue functions blue again ;)
