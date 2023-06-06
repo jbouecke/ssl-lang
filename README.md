@@ -17,7 +17,7 @@ N/A
 
 ## Known Issues
 
-* SQL highlighting in separately declared string variables doesn't work.
+* SSL highlighting in ?expr? segements of SQLExecute doesn't work
 
 ## Release Notes
 
